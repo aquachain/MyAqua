@@ -6,6 +6,20 @@ export const makeNodeName = (network: string, name: string) => {
 };
 
 export const NODE_CONFIGS: { [key in StaticNetworkIds]: RawNodeConfig[] } = {
+  AQUA: [
+    {
+      name: makeNodeName('AQUA', 'aquachain'),
+      type: 'rpc',
+      service: 'aquacha.in',
+      url: 'https://tx.aquacha.in/api'
+    },
+    {
+      name: makeNodeName('AQUA', 'uncan.onical'),
+      type: 'rpc',
+      service: 'uncan.onical.org',
+      url: 'https://c.onical.org'
+    }
+  ],
   ETH: [
     {
       name: makeNodeName('ETH', 'mycrypto'),
@@ -210,21 +224,6 @@ export const NODE_CONFIGS: { [key in StaticNetworkIds]: RawNodeConfig[] } = {
       type: 'rpc',
       service: 'ethersocial.org',
       url: 'https://api.esn.gonspool.com'
-    }
-  ],
-
-  AQUA: [
-    {
-      name: makeNodeName('AQUA', 'aquachain'),
-      type: 'rpc',
-      service: 'aquacha.in',
-      url: 'https://tx.aquacha.in/api'
-    },
-    {
-      name: makeNodeName('AQUA', 'uncan.onical'),
-      type: 'rpc',
-      service: 'uncan.onical.org',
-      url: 'https://c.onical.org'
     }
   ]
 };
